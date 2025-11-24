@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simple HTML Project — Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">HAS</h1>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="container">
+        <h2>Hello — I'm Hasinur Arefin Shawon</h2>
+        <p class="lead">Senior developer. Building clean software.</p>
+        <a class="btn" href="#projects">See my work</a>
+      </div>
+    </section>
+
+    <section id="about" class="container section">
+      <h3>About</h3>
+      <p>ICT professional with almost 5 years of experience in Odoo development, ERP implementation, ICT project management.</p>
+    </section>
+
+    <section id="projects" class="container section">
+      <h3>Projects</h3>
+      <div class="grid">
+        <article class="card">
+          <h4>Project A</h4>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+          <a class="small" href="#">View details</a>
+        </article>
+        <article class="card">
+          <h4>Project B</h4>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+          <a class="small" href="#">View details</a>
+        </article>
+        <article class="card">
+          <h4>Project C</h4>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+          <a class="small" href="#">View details</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="container section">
+      <h3>Contact</h3>
+      <form id="contact-form" class="form">
+        <label>
+          Name
+          <input type="text" name="name" required />
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" required />
+        </label>
+        <label>
+          Message
+          <textarea name="message" rows="4" required></textarea>
+        </label>
+        <div class="form-row">
+          <button type="submit" class="btn">Send</button>
+          <span id="form-status" class="muted"></span>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Shawon</p>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

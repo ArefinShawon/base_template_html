@@ -1,0 +1,62 @@
+:root{
+  --bg: #ffffff;
+  --fg: #0b1b2b;
+  --muted: #6b7280;
+  --accent: #6a8f5b;
+  --card: #f7faf7;
+  --radius: 10px;
+}
+
+[data-theme="dark"]{
+  --bg: #081216;
+  --fg: #e6f0ea;
+  --muted: #93a3a0;
+  --accent: #9ecf8f;
+  --card: #072018;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg);
+  color:var(--fg);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+}
+
+/* layout */
+.container{max-width:900px;margin:0 auto;padding:0 16px}
+.site-header{border-bottom:1px solid rgba(0,0,0,0.06);background:transparent;position:sticky;top:0;z-index:10}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.logo{margin:0;font-weight:700}
+.nav a{margin-right:12px;color:var(--muted);text-decoration:none}
+.nav button{background:none;border:0;cursor:pointer;font-size:16px}
+
+/* hero */
+.hero{padding:48px 0;text-align:center}
+.lead{color:var(--muted);margin-top:8px}
+.btn{display:inline-block;padding:8px 14px;border-radius:8px;background:var(--accent);color:#fff;text-decoration:none;border:0;cursor:pointer}
+.small{font-size:.9rem;color:var(--accent)}
+
+/* sections */
+.section{padding:28px 0;border-bottom:1px solid rgba(0,0,0,0.04)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.card{background:var(--card);padding:16px;border-radius:8px;box-shadow:0 1px 4px rgba(2,6,8,0.04)}
+.meta{list-style:none;padding:0;margin:8px 0 0 0;color:var(--muted)}
+
+/* form */
+.form label{display:block;margin-bottom:10px;font-weight:500}
+.form input,.form textarea{width:100%;padding:8px;border-radius:6px;border:1px solid #d1d5db;background:transparent}
+.form-row{display:flex;gap:12px;align-items:center}
+
+/* footer */
+.site-footer{padding:18px 0;text-align:center;color:var(--muted);font-size:.9rem}
+
+/* responsive tweaks */
+@media (max-width:520px){
+  .site-header .container{padding:10px}
+  .hero{padding:36px 0}
+}
